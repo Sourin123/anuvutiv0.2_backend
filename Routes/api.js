@@ -7,6 +7,7 @@ var BookModule = require("../models/book.modules")
 router.get('/', function(req, res, next) {
     var main = async () =>{
         var data = await BookModule.find({});
+        
         res.json(data)
     }
   main();
