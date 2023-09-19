@@ -1,6 +1,6 @@
 
 const mongo = require("mongoose");
-var url = process.env.MONGO_URI;
+var url = 'mongodb+srv://sourinsaha2001:4pGLHdvfCBDhuIuw@cluster0.gate6ou.mongodb.net/anubhuti';
 mongo.connect(url).then(console.log("connection successful" )).catch((err)=>{
     console.log(err);
 });
@@ -50,6 +50,9 @@ const BookSchema = new mongo.Schema({
         "date" : {
             type : Date,
             default : Date.now  
+        },
+        "uri" : {
+            type: String
         }
       
 });
