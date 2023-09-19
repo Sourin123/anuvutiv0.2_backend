@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
           data : data
         }
         
-        res.json(getAllBooks)
+        res.send(toString(getAllBooks))
       } catch (error) {
         console.log(error);
       }
